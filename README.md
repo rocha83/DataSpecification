@@ -44,6 +44,27 @@ PersistenceRepository<T>                         # escrita + leitura interna (co
 - `netstandard2.1`
 - Sem dependências externas.
 
+## 📌 Testes e cobertura
+
+![line coverage](https://img.shields.io/badge/line%20coverage-100%25-brightgreen)
+![tests](https://img.shields.io/badge/tests-32-brightgreen)
+
+O assembly `Rochas.Data.Specification` possui **32 testes** unitários (xUnit) com **100% de cobertura de linha** e **100% de cobertura de branch**, medidos via [coverlet](https://github.com/coverlet-coverage/coverlet) (`cobertura`):
+
+```bash
+dotnet test Rochas.Data.Specification.Test/Rochas.Data.Specification.Test.csproj \
+  --collect:"XPlat Code Coverage" \
+  --settings Rochas.Data.Specification.Test/coverage.runsettings
+```
+
+| Área | Linhas cobertas | Cobertura |
+|------|-----------------|-----------|
+| `Annotations` | 26 / 26 | 100% |
+| `Models` | 22 / 22 | 100% |
+| `Enums` | — (apenas metadados) | n/a |
+| `Interfaces` | — (apenas metadados) | n/a |
+| **Total** | **48 / 48** | **100%**
+
 ## 📌 Licença
 
 GPL v2 — veja `GNUv2_License.txt`.
